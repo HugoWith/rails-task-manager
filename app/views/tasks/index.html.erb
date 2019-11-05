@@ -1,0 +1,41 @@
+<!-- app/views/tasks/index.html.erb -->
+<head>
+<script src="https://kit.fontawesome.com/9823810c9a.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <h1>TOUT DOUX LISTE 🎈</h1>
+
+
+
+  <div class="container flex">
+    <div class="cards">
+      <% @tasks.each do |task| %>
+        <div class="cards_each">
+          <input type="checkbox" id="title" name="title"
+          checked>
+          <h2 style="display: inline-block;" ><%= link_to task.title, task_path(task) %></h2>
+
+          <%= link_to "🔫", task_path(task),
+          method: :delete,
+          data: { confirm: "Are you sure?" }  %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
+<div class="link">
+ <%= link_to "Create new task", new_path, class: "btn"  %>
+</div>
+
+
+
+
+
+</body>
+

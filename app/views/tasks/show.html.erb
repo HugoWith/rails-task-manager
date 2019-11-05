@@ -1,0 +1,6 @@
+<!-- app/views/tasks/show.html.erb -->
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+
+<%= link_to "Back to the Tout doux liste", tasks_path, class: "btn" %>
+<%= link_to "Edit la task", edit_path, class: "btn" %>
